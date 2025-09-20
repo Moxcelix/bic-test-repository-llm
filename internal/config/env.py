@@ -1,6 +1,9 @@
 import os
+from dotenv import load_dotenv
 
 class Env:
-    DeepseekApiKey = os.environ['DEEPSEEK_API_KEY']
-    DeepseekApiUrl = os.environ['DEEPSEEK_API_URL']
-    DeepseekModel = os.environ['DEEPSEEK_MODEL']
+    def __init__(self):
+        load_dotenv() 
+        self.DeepseekApiKey = os.environ['DEEPSEEK_API_KEY']
+        self.DeepseekApiUrl = os.environ['DEEPSEEK_API_URL']
+        self.DeepseekModel = os.environ['DEEPSEEK_MODEL']
